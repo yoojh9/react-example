@@ -12,6 +12,8 @@
 ```
 $ npm install -g babel webpack webpack-dev-server
 ```
+
+<br/>
 ## 2. node.js 프로젝트 생성
 $ npm init
 
@@ -44,4 +46,4 @@ npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-e
 
 ---
 #### 참고
-[velopert님 블로그, JavaScript의 Event Loop](https://velopert.com/814) <br/>
+[velopert님 블로그, 작업환경 설정하기](https://velopert.com/814) <br/>
