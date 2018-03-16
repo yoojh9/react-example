@@ -11,12 +11,15 @@
 - webpack-dev-server: 간단한 개발 서버로 static 페이지 서버. hot-loader를 통하여 코드가 수정될 때 마다 자동으로 리로드 되게 할 수 있다
 ```
 $ npm install -g babel webpack webpack-dev-server
-```
+```  
 
 <br/>
-## 2. node.js 프로젝트 생성
-$ npm init
 
+## 2. node.js 프로젝트 생성
+
+```
+$ npm init
+```  
 <br/>
 
 ## 3. dependency 및 플러그인 설치
