@@ -45,6 +45,8 @@ this.setState({
 
 - Immutability Helper: 다른 방법으로 객체나 배열을 더 쉽게 수정하게 해주는 immutable.js를 사용한다
 
+<br/>
+
 ## 3. Immutability Helper
 - 설치 및 import
 
