@@ -45,18 +45,67 @@ this.setState({
 
 - Immutability Helper: 다른 방법으로 객체나 배열을 더 쉽게 수정하게 해주는 immutable.js를 사용한다
 
+## 3. Immutability Helper
+- 설치 및 import
+
 ```
-  $ npm install --save react-addons-update  // 라이브러리 설치
+$ npm install --save react-addons-update  // 라이브러리 설치
 
-  import update from 'react-addons-update'  // import한 update는 함수 형태
+import update from 'react-addons-update'  // import한 update는 함수 형태
+```
 
-  // 컴포넌트에서 사용방법 (원소 추가)
-  this.setState({
-    list: update(
-      this.state.list,
-      {
-        $push: [newObj, newObj2]
+<br/>
+
+- 원소 추가
+
+```
+// 컴포넌트에서 사용방법
+// update( {처리해야 할 객체, 배열}, {처리 명령을 지니고 있는 객체} )
+
+this.setState({
+  list: update(
+    this.state.list,
+    {
+      $push: [newObj, newObj2]    // 객체 하나만 추가 하더라도 []로 감싸져야 함
+    }
+  )
+})
+```
+
+<br/>
+
+- 원소 제거
+
+```
+// list 배열의 index부터 1개의 데이터를 제거함
+
+this.setState({
+  list: update(
+    this.state.list,
+    {
+      $splice: [ [index,1], [index2,3] ]
+    }  
+  )
+})
+```
+
+<br/>
+
+- 원소 제거
+
+```
+// list의 index번 째 아이템의 field와 field2 값을 변경함
+// 객체일 경우에는 [index]가 아닌 [key]로 적용
+
+this.setState({
+  list: update(
+    this.state.list,
+    {
+      [index]: {
+        field: {$set: "value"},
+        field2: {$set: "value2"}
       }
-    )
-  })
+    }
+  )
+})
 ```
