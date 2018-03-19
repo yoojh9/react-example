@@ -155,14 +155,41 @@ class Hello extends React.Component {
 
 - 컴포넌트 LifeCycle API 다이어그램
 ![Alt text](./component-life-cycle-api.png)
+
+<br/>
+
+- 컴포넌트 LifeCycle
 ![Alt text](./component-life-cycle-api2.png)
 
 - [React Docs - Component](https://reactjs.org/docs/react-component.html)
 
 <br/>
 
+## 6. localStorage
+- localStorage는 HTML5 부터 지원이 되는 데이터 저장 공간
+- 쿠키는 도메인 당 4KB가 최대 용량인데 비하여, localStorage는 2.5MB ~ 5MB 까지 저장할 수 있다
+- localStorage는 텍스트 형태로 저장되기 때문에 객체형태로 그대로 저장하기 어렵다
+- 지금 우리가 만든 Contacts 어플리케이션은 추가해도 새로고침하면 데이터가 유지되지 않음
+- Contact.js에 componentWillMount()와 componentDidUpdate()를 추가해보자
+- [localStorage 사용법](http://www.w3schools.com/html/html5_webstorage.asp) <br/>
+
+```
+ let object = { name : 'jeonghyun' }
+
+ localStorage.girl = object;
+ console.log(localStorage.girl);  // "[object Object]"
+
+ localStorage.girl = JSON.stringify(object);
+ console.log(localStorage.girl); // "{ "name": "jeonghyun" }"
+
+ let jh = JSON.parse(localStorage.girl);
+ console.log(jh); // { name: 'jeonghyun'}
+```
+
+<br/>
+
 ---
 #### 참고
 [velopert님 블로그, Component LifeCycle API](https://velopert.com/1130) <br/>
-[velopert님 블로그, Component LifeCycle API](https://velopert.com/1130)
+[reactjsprogram](https://velopert.com/1130)
 http://reactjsprogram.blogspot.kr/

@@ -35,6 +35,23 @@ export default class Contact extends React.Component {
     }
 
 
+    componentWillMount(){
+      const contactData = localStorage.contactData;
+      if(contactData){
+        this.setState({
+          contactData: JSON.parse(contactData)
+        });
+      }
+    }
+
+    // contact 데이터가 이전 값이랑 지금 값이랑 다르다면 localStorage에 지금 값을 저장
+    componentDidUpdate(prevProps, prevState){
+      if(JSON.stringify(prevState) != JSON.stringify(this.state.contactData)){
+        localStorage.contactData = JSON.stringify(this.state.contactData);
+      }
+    }
+
+
     handleChange(e){
         this.setState({
           keyword: e.target.value
