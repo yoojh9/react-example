@@ -53,7 +53,7 @@ export default class Contact extends React.Component {
       });
     }
 
-    handleReomove(){
+    handleRemove(){
       this.setState({
         contactData: update(this.state.contactData,
           {
