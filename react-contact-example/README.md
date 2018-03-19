@@ -91,7 +91,7 @@ this.setState({
 
 <br/>
 
-- 원소 제거
+- 원소 변경
 
 ```
 // list의 index번 째 아이템의 field와 field2 값을 변경함

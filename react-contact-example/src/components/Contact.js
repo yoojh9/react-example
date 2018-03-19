@@ -27,6 +27,10 @@ export default class Contact extends React.Component {
         // handling events 바인딩
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
+
+        this.handleCreate = this.handleCreate.bind(this);
+        this.handleRemove = this.handleRemove.bind(this);
+        this.handleEdit = this.handleEdit.bind(this);
     }
 
     handleChange(e){
@@ -43,6 +47,35 @@ export default class Contact extends React.Component {
       console.log(key, 'is selected');
     }
 
+    handleCreate(contact){
+      this.setState({
+        contactData: update(this.state.contactData, { $push: [contact] }) // 아이템 하나도 배열 형태로 전달
+      });
+    }
+
+    handleReomove(){
+      this.setState({
+        contactData: update(this.state.contactData,
+          {
+            $spice: [[this.state.selectedKey, 1]]
+          }
+        ),
+        selectedKey: -1  // 무효화
+      });
+    }
+
+    handleEdit(name, phone){
+      this.setState({
+        contactData: update(this.state.contactData,
+          {
+            [this.state.selectedKey] : {
+              name: { $set: name },
+              phone: { $set: phone }
+            }
+          }
+        )
+      });
+    }
 
     render() {
         const mapToComponents = (data) => {
@@ -53,7 +86,7 @@ export default class Contact extends React.Component {
             return data.map((contact, i) => {
                 return (<ContactInfo contact={contact}
                                      key={i}
-                                     onClick={()=>{this.handleClick(i)}}/>);
+                                     onClick={()=>{this.handleClick(i)}}/>)
             });
         };
 
