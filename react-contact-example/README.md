@@ -46,11 +46,11 @@ this.setState({
 - Immutability Helper: 다른 방법으로 객체나 배열을 더 쉽게 수정하게 해주는 immutable.js를 사용한다
 
 ```
-  $ npm install --save react-addons-update
+  $ npm install --save react-addons-update  // 라이브러리 설치
 
   import update from 'react-addons-update'  // import한 update는 함수 형태
 
-  // 사용방법 (원소 추가)
+  // 컴포넌트에서 사용방법 (원소 추가)
   this.setState({
     list: update(
       this.state.list,
