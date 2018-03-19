@@ -111,3 +111,42 @@ this.setState({
   )
 })
 ```
+
+<br/>
+
+## 4. ref
+- id와 비슷한 개념
+
+```
+class Hello extends React.Component {
+  render(){
+    return(
+      <div>
+        <input ref={ (ref) => {this.input = ref} } />
+      </div>
+    )
+  }
+
+  componentDidMount(){
+    this.input.value = "Hi, I used ref to do this"
+  }
+
+  ReactDom.render(
+    <hello/>,
+    document.getElementById('app')
+  )
+}
+```
+
+<br/>
+
+## 5. Component LifeCycle API
+- 컴포넌트가 DOM 위에 생성되기 전과 후, 데이터가 변경되어 상태를 업데이트 하기 전과 후, 컴포넌트가 DOM에서 사라지기 전에 실행되는 메소드
+- 컴포넌트 API의 종류
+  - componentWillMount
+  - componenetDidMount
+  - componenetWillReceiveProps
+  - shouldComponenetUpdate
+  - componenetWillUpdate
+  - componentDidUpdate
+  - componentWillUnmount

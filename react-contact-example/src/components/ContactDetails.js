@@ -13,6 +13,7 @@ export default class ContactDetails extends React.Component{
     this.handleChange = this.handleChange.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
 
@@ -47,6 +48,13 @@ export default class ContactDetails extends React.Component{
     this.props.onEdit(this.state.name, this.state.phone);
   }
 
+  // 마우스 클릭 없이 엔터키로 데이터 추가
+  handleKeyPress(e){
+    if(e.charCode===13){
+      this.handleToggle();
+    }
+  }
+
 
   render(){
     const details = (
@@ -59,10 +67,23 @@ export default class ContactDetails extends React.Component{
     const edit = (
       <div>
         <p>
-          <input type="text" name="name" placeholder="name" value={this.state.name} onChange={this.handleChange}/>
+          <input
+            type="text"
+            name="name"
+            placeholder="name"
+            value={this.state.name}
+            onChange={this.handleChange}
+          />
         </p>
         <p>
-          <input type="text" name="phone" placeholder="phone" value={this.state.phone} onChange={this.handleChange}/>
+          <input
+            type="text"
+            name="phone"
+            placeholder="phone"
+            value={this.state.phone}
+            onChange={this.handleChange}
+            onKeyPress={this.handleKeyPress}
+          />
         </p>
       </div>
     )
