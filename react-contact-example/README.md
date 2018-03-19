@@ -153,12 +153,12 @@ class Hello extends React.Component {
 
 <br/>
 
-- 컴포넌트 LifeCycle API 다이어그램
-![Alt text](./component-life-cycle-api.png)
+- 컴포넌트 LifeCycle API 다이어그램  
+![Alt text](./component-life-cycle-api.png)  
 
 <br/>
 
-- 컴포넌트 LifeCycle
+- 컴포넌트 LifeCycle  
 ![Alt text](./component-life-cycle-api2.png)
 
 - [React Docs - Component](https://reactjs.org/docs/react-component.html)
