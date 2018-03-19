@@ -34,25 +34,28 @@ export default class Contact extends React.Component {
         this.handleEdit = this.handleEdit.bind(this);
     }
 
+
     handleChange(e){
         this.setState({
           keyword: e.target.value
         });
     }
 
+
     handleClick(key){
       this.setState({
         selectedKey: key
       });
-
       console.log(key, 'is selected');
     }
+
 
     handleCreate(contact){
       this.setState({
         contactData: update(this.state.contactData, { $push: [contact] }) // 아이템 하나도 배열 형태로 전달
       });
     }
+
 
     handleRemove(){
       if(this.state.selectedKey < 0) return;
@@ -67,6 +70,7 @@ export default class Contact extends React.Component {
       });
     }
 
+
     handleEdit(name, phone){
       this.setState({
         contactData: update(this.state.contactData,
@@ -79,6 +83,7 @@ export default class Contact extends React.Component {
         )
       });
     }
+
 
     render() {
         const mapToComponents = (data) => {

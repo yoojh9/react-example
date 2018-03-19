@@ -15,6 +15,7 @@ export default class ContactDetails extends React.Component{
     this.handleEdit = this.handleEdit.bind(this);
   }
 
+
   // handleChange가 있어야 input 박스에 value를 변경할 수 있음.
   handleChange(e){
     let nextState = {};
@@ -22,6 +23,7 @@ export default class ContactDetails extends React.Component{
     nextState[e.target.phone] = e.target.phone;
     this.setState(nextState);
   }
+
 
   handleToggle(){
     if(!this.state.isEdit){
@@ -36,14 +38,15 @@ export default class ContactDetails extends React.Component{
     this.setState({
       isEdit: !this.state.isEdit,
     });
-
     // 처음에 toggle 할 때는 setState가 비동기이므로, setState가 끝나기 전에 console.log가 실행되서 false로 찍힘
     console.log(this.state.isEdit);
   }
 
+
   handleEdit(){
     this.props.onEdit(this.state.name, this.state.phone);
   }
+
 
   render(){
     const details = (

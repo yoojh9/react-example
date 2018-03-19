@@ -13,6 +13,7 @@ export default class ContactCreate extends React.Component{
     this.handleClick = this.handleClick.bind(this);
   }
 
+
   // handleChange가 있어야 input 박스에 value를 변경할 수 있음.
   handleChange(e){
     let nextState = {};
@@ -20,6 +21,7 @@ export default class ContactCreate extends React.Component{
     nextState[e.target.phone] = e.target.phone;
     this.setState(nextState);
   }
+
 
   handleClick(){
     const contact = {
@@ -32,6 +34,7 @@ export default class ContactCreate extends React.Component{
       phone: ''
     });
   }
+
 
   render(){
     return(
