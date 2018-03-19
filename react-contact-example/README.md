@@ -31,6 +31,7 @@ react에서는 반드시 preventDefault()를 호출해야 한다.
 - 위의 이벤트를 적용시키기 위해서, 이벤트는 컴포넌트에 props로 전달이 되므로 ContactInfo 컴포넌트에 먼저 적용시킨다.
 
 <br/>
+
 ## 2. state 내부 배열 처리하기
 - Array.push를 쓰게 되면 배열 자체를 변경시키므로, 만약 state의 내부 배열에 값을 추가하고 싶다면 concat을 사용한다.
 - concat은 기존 배열은 그대로 두고 새로운 배열을 생성한다
