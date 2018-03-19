@@ -143,12 +143,12 @@ class Hello extends React.Component {
 ## 5. Component LifeCycle API
 - 컴포넌트가 DOM 위에 생성되기 전과 후, 데이터가 변경되어 상태를 업데이트 하기 전과 후, 컴포넌트가 DOM에서 사라지기 전에 실행되는 메소드
 - 컴포넌트 API의 종류
-  - componentWillMount : 컴포넌트가 DOM 위에 만들어지기 전에 실행
-  - componenetDidMount : 컴포넌트가 만들어지고 첫 렌더링을 다 마친 후 실행되는 메소드
-  - componenetWillReceiveProps : 컴포넌트가 새로운 Props를 받았을 때
+  - componentWillMount : 컴포넌트가 DOM 위에 만들어지기 전에 실행 (DOM 처리를 못함)
+  - componenetDidMount : 컴포넌트가 만들어지고 첫 렌더링을 다 마친 후 실행되는 메소드 (다른 자바스크립트 프레임워크 연동 및 setTimeout, setInterval 및 Ajax 사용)
+  - componenetWillReceiveProps : 컴포넌트가 새로운 Props를 받았을 때 (props에 따라 state를 업데이트 할 때 사용하면 유용. 이 안에서 setState를 해도 괜찮다.)
   - shouldComponenetUpdate : 컴포넌트가 업데이트를 해야 할지 말아야 할지 정하는 메소드 (prop 혹은 state 가 변경 되었을 때, 리렌더링을 할지 말지 정하는 메소드)
   - componenetWillUpdate : 컴포넌트가 리렌더링 되기 전에 실행 (이 메소드 안에서는 this.setState()를 사용하면 무한루프가 발생하게 됨)
-  - componentDidUpdate : 컴포넌트가 리렌더링을 마친 후에 실행
+  - componentDidUpdate : 컴포넌트가 리렌더링을 마친 후에 실행 (여기에서도 setState 사용하지 말 것)
   - componentWillUnmount : 컴포넌트가 DOM에서 사라진 후 실행되는 메소드
 
 <br/>
