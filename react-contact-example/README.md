@@ -143,10 +143,26 @@ class Hello extends React.Component {
 ## 5. Component LifeCycle API
 - 컴포넌트가 DOM 위에 생성되기 전과 후, 데이터가 변경되어 상태를 업데이트 하기 전과 후, 컴포넌트가 DOM에서 사라지기 전에 실행되는 메소드
 - 컴포넌트 API의 종류
-  - componentWillMount
-  - componenetDidMount
-  - componenetWillReceiveProps
-  - shouldComponenetUpdate
-  - componenetWillUpdate
-  - componentDidUpdate
-  - componentWillUnmount
+  - componentWillMount : 컴포넌트가 DOM 위에 만들어지기 전에 실행
+  - componenetDidMount : 컴포넌트가 만들어지고 첫 렌더링을 다 마친 후 실행되는 메소드
+  - componenetWillReceiveProps : 컴포넌트가 새로운 Props를 받았을 때
+  - shouldComponenetUpdate : 컴포넌트가 업데이트를 해야 할지 말아야 할지 정하는 메소드 (prop 혹은 state 가 변경 되었을 때, 리렌더링을 할지 말지 정하는 메소드)
+  - componenetWillUpdate : 컴포넌트가 리렌더링 되기 전에 실행 (이 메소드 안에서는 this.setState()를 사용하면 무한루프가 발생하게 됨)
+  - componentDidUpdate : 컴포넌트가 리렌더링을 마친 후에 실행
+  - componentWillUnmount : 컴포넌트가 DOM에서 사라진 후 실행되는 메소드
+
+<br/>
+
+- 컴포넌트 LifeCycle API 다이어그램
+![Alt text](./component-life-cycle-api.png)
+![Alt text](./component-life-cycle-api2.png)
+
+- [React Docs - Component](https://reactjs.org/docs/react-component.html)
+
+<br/>
+
+---
+#### 참고
+[velopert님 블로그, Component LifeCycle API](https://velopert.com/1130) <br/>
+[velopert님 블로그, Component LifeCycle API](https://velopert.com/1130)
+http://reactjsprogram.blogspot.kr/
