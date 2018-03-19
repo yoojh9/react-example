@@ -142,6 +142,8 @@ class Hello extends React.Component {
 
 ## 5. Component LifeCycle API
 - 컴포넌트가 DOM 위에 생성되기 전과 후, 데이터가 변경되어 상태를 업데이트 하기 전과 후, 컴포넌트가 DOM에서 사라지기 전에 실행되는 메소드
+<br/>
+
 - 컴포넌트 API의 종류
   - componentWillMount : 컴포넌트가 DOM 위에 만들어지기 전에 실행 (DOM 처리를 못함)
   - componenetDidMount : 컴포넌트가 만들어지고 첫 렌더링을 다 마친 후 실행되는 메소드 (다른 자바스크립트 프레임워크 연동 및 setTimeout, setInterval 및 Ajax 사용)
