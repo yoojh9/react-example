@@ -57,7 +57,7 @@ export default class Contact extends React.Component {
       this.setState({
         contactData: update(this.state.contactData,
           {
-            $spice: [[this.state.selectedKey, 1]]
+            $splice: [[this.state.selectedKey, 1]]
           }
         ),
         selectedKey: -1  // 무효화
