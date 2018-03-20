@@ -32,7 +32,21 @@ react에서는 반드시 preventDefault()를 호출해야 한다.
 
 <br/>
 
-## 2. state 내부 배열 처리하기
+## 2. props와 state  
+
+#### 2-1. props
+- props는 컴포넌트에서 사용할 데이터 중 변동되지 않는 데이터를 다룰 때 사용된다.
+- parent 컴포넌트에서 child 컴포넌트로 데이터를 전달할 때도 props가 사용된다.
+
+<br/>
+
+#### 2-2. state
+- 컴포넌트에서 유동적인 데이터를 다룰 때 state를 사용한다.
+
+<br/><br/>
+
+
+## 3. state 내부 배열 처리하기
 - Array.push를 쓰게 되면 배열 자체를 변경시키므로, 만약 state의 내부 배열에 값을 추가하고 싶다면 concat을 사용한다.
 - concat은 기존 배열은 그대로 두고 새로운 배열을 생성한다
 
@@ -47,7 +61,7 @@ this.setState({
 
 <br/>
 
-## 3. Immutability Helper
+## 4. Immutability Helper
 - 설치 및 import
 
 ```
@@ -114,7 +128,7 @@ this.setState({
 
 <br/>
 
-## 4. ref
+## 5. ref
 - id와 비슷한 개념
 
 ```
@@ -140,7 +154,7 @@ class Hello extends React.Component {
 
 <br/>
 
-## 5. Component LifeCycle API
+## 6. Component LifeCycle API
 - 컴포넌트가 DOM 위에 생성되기 전과 후, 데이터가 변경되어 상태를 업데이트 하기 전과 후, 컴포넌트가 DOM에서 사라지기 전에 실행되는 메소드
 <br/>
 
@@ -167,7 +181,7 @@ class Hello extends React.Component {
 
 <br/>
 
-## 6. localStorage
+## 7. localStorage
 - localStorage는 HTML5 부터 지원이 되는 데이터 저장 공간
 - 쿠키는 도메인 당 4KB가 최대 용량인데 비하여, localStorage는 2.5MB ~ 5MB 까지 저장할 수 있다
 - localStorage는 텍스트 형태로 저장되기 때문에 객체형태로 그대로 저장하기 어렵다
