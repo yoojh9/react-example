@@ -1,3 +1,4 @@
+
 // 액션 생성자 명칭을 index.js로 한 이유는 actions/ 디렉토리만 불러왔을 때 자동을 이 파일이 로드되도록 하기 위해
 
 // import { INCREMENT, DECREMENT, SET_COLOR } from './ActionTypes'
