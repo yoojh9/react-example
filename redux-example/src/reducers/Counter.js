@@ -13,7 +13,7 @@ const initialState = {
 };
 
 // 함수 state가 undefined일 경우 initialState로 default
-export default function counter(state = initalState, action){
+export default function counter(state = initialState, action){
 
   /* 액션에 따라서 반환 */
 
@@ -30,7 +30,7 @@ export default function counter(state = initalState, action){
           dumbObject: { ...state.dumbObject, u: 0}
       };
 
-    case types:DECREMENT:
+    case types.DECREMENT:
       return {
         ...state, number: state.number - 1
       }

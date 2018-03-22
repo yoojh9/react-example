@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import counter from "./counter";
+import counter from "./Counter";
 import ui from "./ui"
 
 // reducer 합치기
