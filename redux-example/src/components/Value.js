@@ -8,6 +8,7 @@ const defaultProps = {
   number: -1
 };
 
+// 숫자를 보여주는 컴포넌트
 class Value extends Component {
     // useless constructor
     // constructor(props) {

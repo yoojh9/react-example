@@ -17,6 +17,7 @@ const defaultProps = {
   onRandomizeColor: createWarning('onRandomizeColor')
 };
 
+// 버튼 3개를 보여줄 컴포넌트 (멍청한 컴포넌트)
 class Contol extends Component {
     // useless constructor
     // constructor(props) {

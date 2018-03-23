@@ -19,7 +19,6 @@ export default function counter(state = initialState, action){
 
   switch(action.type) {
     case types.INCREMENT:
-      // return { number : state.number + 1 }
 
       // ES6 spread 방식을 사용
       // 기존에 있던 state에 number를 stae.number+1 한 값으로 변경
